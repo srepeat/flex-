@@ -1,0 +1,30 @@
+.box{
+    /* 声明方式 */
+    display: flex;
+    /* 父元素位置 flex-end flex-start*/
+    /* space-around 空隙环绕
+       space-between 尽头顶端 中间空隙
+       space-evenly 空隙等分
+    */
+    justify-content: space-around;
+    /* 子项目在父级中的居中方式 flex-end flex-start*/
+    align-items: center;
+    /* 换行 */
+    flex-wrap: wrap;
+    /* vw 视图view */
+    width: 100vw;
+    height: 100vh;
+    background: blue;
+}
+.box div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  border: 1px solid #ccc;
+}
+.box div:first-child{
+    /* 让子项目宽度变长 */
+    /* flex-grow: 0; */
+    /* flex-shrink: inherit; */
+    /* align-self: flex-start; */
+}
