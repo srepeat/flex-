@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: bisque;
+        }
+        .clearfix:after {
+            clear: both;
+            zoom: 1;
+        }
+        .container {
+            width: 1200px;
+            margin:100px auto;
+        }
+        .box {
+            position: relative;
+            /* 定位要给宽高 所以左右的宽高一个不能少 */
+        }
+        .box-l {
+            width: 650px;
+            height: 370px;
+            background-color: #060;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .box-l .title {
+            width: 100%;
+            height: 58px;
+            background-color: orange;
+            box-sizing: border-box;
+        }
+        .box-r {
+            width: 345px;
+            height: 370px;
+            background-color: red;
+            position: absolute;
+            right: 0;
+            top: 0;
+            box-sizing: border-box;
+        }
+        .title .title-li {
+            float: left;
+            width: 25%;
+            height: 100%;
+            background-color: #44a9a1;
+            font-weight: 600;
+            color: #fff;
+            text-align: center;
+            line-height: 58px;
+            position: relative;
+            /* box-sizing: border-box; */
+            
+        }
+        .bd:after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background-color: #666;
+        }
+        .title .fff {
+            background-color: #fff;
+            color: #000;
+            border-top: 4px solid #ffdb84;
+            /* height: 100%; */
+            margin-top: -4px;
+            /* 可以作为js的类实现方法 */
+        }
+        .content {
+            margin: 30px auto 40px;
+            width: 578px;
+            height: 252px;
+            background-color: deeppink;
+        }
+        .content-l {
+            width: 50%;
+            height: 100%;
+            background-color: skyblue;
+            float: left;
+        }
+        .content-r {
+            width: 30%;
+            height: 100%;
+            background-color: #ffdb84;
+            float: right;
+        }
+        /* 左右结构搭建完毕 定位盒子不用套那么多 */
+    </style>
+</head>
+<body>
+    <div class="container box">
+        <div class="box-l">
+            <div class="title clearfix">
+                <div class="title-li bd fff">New Flower</div>
+                <div class="title-li bd">Happy birthday</div>
+                <div class="title-li bd">Happy NewYear</div>
+                <div class="title-li ">愛してる</div>
+            </div>
+        <div class="content clearfix">
+            <div class="content-l">
+
+            </div>
+            <div class="content-r"></div>
+        </div>
+        </div>
+         <!-- 左边可以直接套刚才我写的那个  -->
+        <div class="box-r"></div>
+    </div>
+</body>
+</html>
